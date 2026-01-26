@@ -1,0 +1,115 @@
+html {
+    
+}
+
+head {
+    
+}
+
+body {
+    background-color: black;
+    color: white;
+    overflow: scroll;
+    text-align: center;
+}
+/* v button base looks v */
+.submit {
+    margin: 20px;
+    border-radius: 30px;
+    border: 0px;
+    background-image: linear-gradient(to right, #8437CC, #A645FF);
+    height: 40px;
+    width: 350px;
+    font-weight: bold;
+    font-family: sans;
+    font-size: 15px;
+    color: white;
+}
+/* v hovering over button to change color v */
+.submit:hover {
+    background-image: linear-gradient(to right, #5d2591, #8100f8);
+}
+
+#note {
+    margin: 20px;
+    border-radius: 12px;
+    border: 0px;
+    background-color: #3B1659;
+    height: 50px;
+    width: 300px;
+    color: white;
+    padding: 12px;
+    overflow: auto;
+}
+
+#time, #date {
+    margin: 10px;
+    border-radius: 12px;
+    border: 0px;
+    background-color: #3B1659;
+    height: 20px;
+    width: 300px;
+    color: white;
+    padding: 12px;
+}
+
+#add_new {
+    border-radius: 12px;
+    border: 0px;
+    padding: 1px;
+    background-color: #1C1C1C;
+    width: 400px;
+    margin: left;
+    margin: 10px;
+    font-family: sans;
+    font-weight: bold;
+    color: white;
+}
+
+#current_time {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: sans;
+    color: white;
+}
+#screen {
+    font-family: sans;
+    font-weight: bold;
+    
+}
+
+#menu {
+    border-radius: 12px;
+    border: 0px;
+    padding: 1px;
+    background-color: #1C1C1C;
+    font-family: sans;
+    font-weight: bold;
+    color: white; 
+    margin: left;
+    margin: 10px;
+    width: 400px;
+}
+
+#hr {
+    width: 400px;
+    margin: 10px;
+    margin: left;
+    height: 2px;
+    background-color: darkgray;
+}
+
+.alarm {
+    margin: 10px;
+    margin: right;
+    width: 400px;
+    height: 400px;
+    background-color: #1C1C1C;
+    border: 0px;
+    border-radius: 30px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
