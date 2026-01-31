@@ -40,6 +40,14 @@ document.getElementById("add").onclick = function addReminder() {
     const alarm = document.createElement("div");
     alarm.style.animation = "fade-in 0.5s";
     alarm.classList.add("alarm");
+    alarm.innerHTML = `<span class="alarm-time">${alarmDate} ${alarmTime}</span> <button class="delete-btn">Delete</button>`;
+    
+    alarm.querySelector(".delete-btn").onclick = function() {
+        alarm.style.animation = "fade-out 0.5s";
+        setTimeout(() => {
+            alarm.remove();
+        }, 500);
+    };
     document.body.appendChild(alarm);
     
     
