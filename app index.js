@@ -52,8 +52,8 @@ document.getElementById("add").onclick = function addReminder() {
     alarm.style.animation = "fade-in 0.5s";
     alarm.classList.add("alarm");
     alarm.innerHTML = `
-        <div class="alarm-time">${alarmDate} ${alarmTime}</div>
-        <div class="alarm-note">${noteText}</div>
+        <div class="alarm-note">${noteText}</div> <br>
+        <div class="alarm-time">${alarmDate} ${alarmTime}</div> <br>
         <button class="delete-btn">Delete</button>
     `;
 
