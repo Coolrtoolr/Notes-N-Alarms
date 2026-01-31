@@ -59,7 +59,8 @@ body {
     padding: 1px;
     background-color: #1C1C1C;
     width: 400px;
-    margin: left;
+    margin-left: auto;
+    margin-right: auto;
     margin: 10px;
     font-family: sans;
     font-weight: bold;
@@ -86,7 +87,8 @@ body {
     font-family: sans;
     font-weight: bold;
     color: white; 
-    margin: left;
+    margin-left: auto;
+    margin-right: auto;
     margin: 10px;
     width: 400px;
 }
@@ -94,19 +96,18 @@ body {
 #hr {
     width: 400px;
     margin: 10px;
-    margin: left;
+    margin-left: auto;
+    margin-right: auto;
     height: 2px;
     background-color: darkgray;
 }
 
 .alarm {
-    margin: 10px;
-    margin: right;
+    margin: 10px auto;
     width: 400px;
-    height: 400px;
+    padding: 20px;
     background-color: #1C1C1C;
-    border: 0px;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 @keyframes fade-in {

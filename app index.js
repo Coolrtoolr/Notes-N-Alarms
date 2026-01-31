@@ -1,3 +1,5 @@
+let alarms = [];
+
 function updateClock() {
   const now = new Date();
 
@@ -36,19 +38,44 @@ setInterval(updateClock, 1000);
 document.getElementById("add").onclick = function addReminder() {
     const alarmTime = document.getElementById("time").value;
     const alarmDate = document.getElementById("date").value;
-    
+    const noteText = document.getElementById("note").value;
+
+    if (!alarmTime || !alarmDate) {
+        alert("Set both a date and time!");
+        return;
+    }
+
+    const alarmDateTime = new Date(`${alarmDate}T${alarmTime}`);
+    alarms.push({ time: alarmDateTime, note: noteText, triggered: false });
+
     const alarm = document.createElement("div");
     alarm.style.animation = "fade-in 0.5s";
     alarm.classList.add("alarm");
-    alarm.innerHTML = `<span class="alarm-time">${alarmDate} ${alarmTime}</span> <button class="delete-btn">Delete</button>`;
+    alarm.innerHTML = `
+        <div class="alarm-time">${alarmDate} ${alarmTime}</div>
+        <div class="alarm-note">${noteText}</div>
+        <button class="delete-btn">Delete</button>
+    `;
+
     alarm.querySelector(".delete-btn").onclick = function() {
         alarm.style.animation = "fade-out 0.5s";
-        setTimeout(() => {
-            alarm.remove();
-        }, 500);
+        setTimeout(() => alarm.remove(), 500);
     };
+
     document.body.appendChild(alarm);
-    
-    
-    
+
+    document.getElementById("note").value = "";
+};
+
+function checkAlarms() {
+    const now = new Date();
+
+    alarms.forEach(alarm => {
+        if (!alarm.triggered && now >= alarm.time) {
+            alarm.triggered = true;
+            alert("⏰ Reminder: " + alarm.note);
+        }
+    });
 }
+
+setInterval(checkAlarms, 1000);
